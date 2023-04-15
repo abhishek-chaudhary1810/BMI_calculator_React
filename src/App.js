@@ -1,30 +1,56 @@
 import "./form.css";
+import { useState } from "react";
+function Calculate(){
+
+}
 function CalculateButton() {
-  return <button className="Button">Calculate</button>;
+  return (
+    <button className="Button" onClick={() => Calculate()}>
+      Calculate
+    </button>
+  );
 }
 function ClearButton() {
   return <button className="Button">Clear</button>;
+
 }
 function InputForm() {
   return (
     <div>
       <div className="Form_Link">
-      <label>Age : </label>
-      <input type="number" placeholder="Enter Age here"/>
-    </div>
-      <div className="Form_Link">
-        <label>Gender : </label>
-      <input type="radio" name="gender" value="male"/>Male
-      <input type="radio" name="gender" value="female"/>Female
-    </div>
-      <div className="Form_Link">
-      <label>Height :</label>
-      <input type="number" placeholder="Enter height"/>
+        <label>
+          Age :
+          <input type="number" name="age" placeholder="Enter Age here" />
+        </label>
       </div>
-     <div className="Form_Link">
-      <label> Weight:</label>
-      <input type="number" placeholder="Enter Weight"/>
-    </div>
+      <div className="Form_Link">
+        <label>
+          Gender :
+          <input
+            type="radio"
+            name="gender"
+            value="male"
+            defaultChecked={true}
+          />
+          Male
+        </label>
+        <label>
+          <input type="radio" name="gender" value="female" />
+          Female
+        </label>
+      </div>
+      <div className="Form_Link">
+        <label>
+          Height :
+          <input type="number" name="Height" placeholder="Enter height" />
+        </label>
+      </div>
+      <div className="Form_Link">
+        <label>
+          Weight:
+          <input type="number" name="Weight" placeholder="Enter Weight" />
+        </label>
+      </div>
     </div>
   );
 }
@@ -39,8 +65,8 @@ function CalculateBmi() {
     </>
   );
 }
-
 function App() {
+  const [formvalue,setFormValue]=useState();
   return (
     <>
       <CalculateBmi />
