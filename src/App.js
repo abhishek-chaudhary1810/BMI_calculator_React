@@ -17,12 +17,7 @@ function CalculateBmi() {
   );
 }
 
-function App() {
-  const [value,setValue]=useState({
-    age : '',
-    Height : '',
-    Weight : ''
-  })
+function App() { 
   console.log(value);
   return (
     <div  style= {{

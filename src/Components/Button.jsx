@@ -1,7 +1,7 @@
 function Button() {
     return (
         <div>
-      <button className="Button" >
+      <button className="Button" onClick={calculatebmi()} >
         Calculate
       </button>
       <button className="Button">Clear</button>
