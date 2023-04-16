@@ -1,4 +1,4 @@
-function CalculateButton() {
+function Button() {
     return (
         <div>
       <button className="Button" >
@@ -8,4 +8,4 @@ function CalculateButton() {
       </div>
     );
   }
-  export default CalculateButton;
+  export default Button;

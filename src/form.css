@@ -4,6 +4,17 @@
   font-family: 'Times New Roman', Times, serif;
   text-align: left;
 }
+/* CSS for Result Box*/
+.Result-Box{
+  display: inline-block;
+  width: 200px;
+  height: 40px;
+  padding: 10px;
+  margin: 10px;
+  border-color: #1f65d6;
+  border-radius: 5px;
+  border-style: solid;
+}
 /* CSS for button */
 .Button {
   align-items: center;

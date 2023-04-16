@@ -1,8 +1,8 @@
 import "./form.css";
 import { useState } from "react";
-import CalculateButton from "./Components/Button";
 import InputForm from "./Components/Form";
 import Button from "./Components/Button";
+import ResultBox from "./Components/Result";
 
 
 function CalculateBmi() {
@@ -12,19 +12,26 @@ function CalculateBmi() {
       <h3>Made in React</h3>
       <InputForm />
       <Button />
+      <ResultBox />
       </div>
   );
 }
 
 function App() {
+  const [value,setValue]=useState({
+    age : '',
+    Height : '',
+    Weight : ''
+  })
+  console.log(value);
   return (
     <div  style= {{
       display: "flex",
+      flexDirection:"column",
       alignItems: "center",
       justifyContent: "center",
       }}>
       <CalculateBmi />
-      <p>Your BMI is : </p>
     </div>
   );
 }

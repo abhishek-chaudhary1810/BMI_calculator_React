@@ -1,3 +1,4 @@
+import { useState } from "react";
 function InputForm() {
   return (
     <div>
@@ -5,26 +6,28 @@ function InputForm() {
         <label>
           Age :
           <input 
+          type="Text"
           name="age"
           placeholder="Enter Age here"
-          type="text"
-          min='0'
-          max='120'
-          maxLength='3'
-          />
+          min={1}
+          max={120}
+          maxLength={3}
+          pattern="[0-9]"
+          required="" 
+                   />
         </label>
       </div>
-      <div className="Form_Link">
+      {/* <div className="Form_Link">
         <label>
           Select Gender :
-          <input type="radio" name="gender" defaultChecked={true} />
+          <input type="radio" name="gender" id="male"defaultChecked={true} />
           Male
         </label>
         <label>
-          <input type="radio" name="gender" />
+          <input type="radio" name="gender" id="female"/>
           Female
         </label>
-      </div>
+      </div> */}
       <div className="Form_Link">
         <label>
           Height(cm) :
@@ -32,20 +35,24 @@ function InputForm() {
           name="Height" 
           placeholder="Enter height"
           min='0'
-          max='120'
+          max='500'
           maxLength='3'
+          pattern="[0-9]"
+          required
           />
         </label>
       </div>
       <div className="Form_Link">
         <label>
-          Weight(in Kg):
+          Weight(Kg):
           <input type="text"
            name="Weight" 
            placeholder="Enter Weight"
            min='0'
-           max='120'
+           max='250'
            maxLength='3'
+           pattern="[0-9]"
+           required
           />
         </label>
       </div>
