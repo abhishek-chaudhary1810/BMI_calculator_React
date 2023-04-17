@@ -1,4 +1,11 @@
-function InputForm() {
+function InputForm({value , setValue}) {
+  const handleChange = (key, value) => {
+    setValue((prev) => {
+      const newValues = { ...prev };
+      newValues[key] = value;
+      return newValues;
+    });
+  }
   return (
     <div>
       <div className="Form_Link">
@@ -7,13 +14,14 @@ function InputForm() {
           <input 
           type="Text"
           name="age"
+          value={value.age}
           placeholder="Enter Age here"
           min={1}
           max={120}
           maxLength={3}
-          pattern="[0-9]"
-          required="" 
-                   />
+          required=""
+          onChange={(e)=>handleChange(e.target.value)} 
+          />
         </label>
       </div>
       {/* <div className="Form_Link">
@@ -32,12 +40,14 @@ function InputForm() {
           Height(cm) :
           <input type="text" 
           name="Height" 
+          value={value.height}
           placeholder="Enter height"
           min='0'
           max='500'
           maxLength='3'
           pattern="[0-9]"
           required
+          onChange={(e)=>{handleChange("height", e.target.value)}}
           />
         </label>
       </div>
@@ -49,14 +59,15 @@ function InputForm() {
            placeholder="Enter Weight"
            min='0'
            max='250'
+           value={value.weight}
            maxLength='3'
            pattern="[0-9]"
+           onChange={(e)=>handleChange("weight",e.target.value)}
            required
           />
         </label>
       </div>
-    </div>
+    </div> 
   );
 }
-
 export default InputForm;

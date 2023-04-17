@@ -3,22 +3,31 @@ import { useState } from "react";
 import InputForm from "./Components/Form";
 import Button from "./Components/Button";
 import ResultBox from "./Components/Result";
+//Single Responsibility principle for building components 
+function CalculateBmi(){
+  //DRY(Dont Repeat Yourself priciple for state )
+  //state is a component Memory
+  //props are just Function Arguments 
+  const [value, setValue]= useState({
+      age: '',
+      height: '',
+      weight :''
+  });
 
-
-function CalculateBmi() {
+  const [state,setResult]=useState(null);
   return (
     <div>    
       <h1>BMI Calculator</h1>
       <h3>Made in React</h3>
-      <InputForm />
-      <Button />
-      <ResultBox />
+      <InputForm value={value} setValue={setValue}/>
+      <Button value={value} setResult={setResult}/>
+      <ResultBox value={state}/>
       </div>
   );
 }
 
 function App() { 
-  console.log(value);
+  
   return (
     <div  style= {{
       display: "flex",
@@ -30,4 +39,5 @@ function App() {
     </div>
   );
 }
+
 export default App;
