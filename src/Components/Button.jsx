@@ -1,10 +1,11 @@
 function Button({value, setResult}) {  
 const result =()=>{
-const heightInMeters= value.heightInMeters/100;
+const heightInMeters = value.heightInMeters/100;
 const weight= value.weight;
-const bmi= weight / (heightInMeters * heightInMeters); 
+const bmi = weight / (heightInMeters * heightInMeters); 
 setResult(bmi);
  }
+ 
   return (
         <div>
       <button className="Button" onClick={result}  >

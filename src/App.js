@@ -14,7 +14,7 @@ function CalculateBmi(){
       weight :''
   });
 
-  const [state,setResult]=useState(null);
+  const [state,setResult]=useState('null');
   return (
     <div>    
       <h1>BMI Calculator</h1>

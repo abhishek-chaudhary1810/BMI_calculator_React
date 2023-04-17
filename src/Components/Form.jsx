@@ -16,11 +16,11 @@ function InputForm({value , setValue}) {
           name="age"
           value={value.age}
           placeholder="Enter Age here"
-          min={1}
-          max={120}
-          maxLength={3}
-          required=""
-          onChange={(e)=>handleChange(e.target.value)} 
+          min='3'
+          max='120'
+          maxLength='3'
+          required
+          onChange={(e)=>handleChange("Age",e.target.value)} 
           />
         </label>
       </div>
