@@ -11,16 +11,15 @@ function InputForm({value , setValue}) {
       <div className="Form_Link">
         <label>
           Age :
-          <input 
-          type="Text"
+          <input type="text" 
           name="age"
-          value={value.age}
-          placeholder="Enter Age here"
-          min='3'
-          max='120'
+          value={value.age} 
+          placeholder="Enter Age"
+          min='0'
+          max='500'
           maxLength='3'
           required
-          onChange={(e)=>handleChange("Age",e.target.value)} 
+          onChange={(e)=>handleChange("age", e.target.value)}
           />
         </label>
       </div>
@@ -39,15 +38,14 @@ function InputForm({value , setValue}) {
         <label>
           Height(cm) :
           <input type="text" 
-          name="Height" 
-          value={value.height}
+          name="Height"
+          value={value.height} 
           placeholder="Enter height"
           min='0'
           max='500'
           maxLength='3'
-          pattern="[0-9]"
           required
-          onChange={(e)=>{handleChange("height", e.target.value)}}
+          onChange={(e)=>handleChange("height", e.target.value)}
           />
         </label>
       </div>

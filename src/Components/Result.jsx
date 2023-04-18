@@ -1,8 +1,8 @@
-function ResultBox({value}){
+function ResultBox({state, setResult}){
     return(
         <div className="Result-Box" >
         <p>Your BMI : </p>
-        {value.result}
+        <p>{state}</p>
         </div>
     );
 }
