@@ -1,4 +1,10 @@
 function InputForm({value , setValue}) {
+ /* 
+ -UI and Styling 
+ -on change event Handler set with key value pair passed as arguments (Callback Function is used)
+ spread operator is used to copy and create new state snapshot
+ -onchange handler is set as key value fair.
+ */
   const handleChange = (key, value) => {
     setValue((prev) => {
       const newValues = { ...prev };

@@ -13,6 +13,8 @@ function CalculateBmi(){
       height: '',
       weight :''
   });
+
+  //initialize result prop as 0 with useState Hook
   const [result,setResult]=useState(0);
   //console.log(result);
   return (
@@ -20,7 +22,7 @@ function CalculateBmi(){
       <h1>BMI Calculator</h1>
       <h3>Made in React</h3>
       <InputForm value={value} setValue={setValue}/>
-      <Button value={value} result={result} setResult={setResult} setValue={setValue}/>
+      <Button value={value}  setResult={setResult} setValue={setValue}/>
       <ResultBox result={result}/>
       </div>
   );
