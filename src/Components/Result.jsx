@@ -1,6 +1,6 @@
-function ResultBox({result, setResult}){
-    if(result==='null'){
-    return(
+function ResultBox({result}){
+    if(result==='null' || result===undefined){
+        return(
         <div className="Result-Box" >
         <p>Your BMI : </p>
         </div>
@@ -9,8 +9,7 @@ function ResultBox({result, setResult}){
     else{
         return(
             <div className="Result-Box" >
-            <p>Your BMI : </p>
-            <p>{result}</p>
+            <p>Your BMI : {result.toFixed(2)}</p>
             </div>
         );
     }

@@ -13,17 +13,15 @@ function CalculateBmi(){
       height: '',
       weight :''
   });
-  const [result,setResult]=useState({
-    calculatedbmi : ''
-  });
+  const [result,setResult]=useState(0);
+  //console.log(result);
   return (
     <div>    
       <h1>BMI Calculator</h1>
       <h3>Made in React</h3>
       <InputForm value={value} setValue={setValue}/>
-      <Button value={value}
-      result={result} setResult={setResult} setValue={setValue}/>
-      <ResultBox value={result} setResult={setResult}/>
+      <Button value={value} result={result} setResult={setResult} setValue={setValue}/>
+      <ResultBox result={result}/>
       </div>
   );
 }
